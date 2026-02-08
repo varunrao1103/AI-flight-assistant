@@ -1,11 +1,11 @@
-### AI flight assistant 
+# AI flight assistant 
 
 This project was to execute open source models => gpt-oss:20B model calling tools to calculate ticket price. 
 
 We exposed get_ticket_price() as tools to the model with destination as parameter.
 As we know that gpt-oss is not capable of executing tools, we handled it handle_tool_call()
 
-# Tool calling :
+### Tool calling :
 ChatCompletionMessage(content='Hello! How can I help you today?', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=None, reasoning='User says "hey". It\'s a greeting. We respond with a greeting. No tool needed. Short, courteous, <=1 sentence.')
 ChatCompletionMessage(content='', refusal=None, role='assistant', annotations=None, audio=None, function_call=None, tool_calls=[ChatCompletionMessageFunctionToolCall(id='call_xqe9l8bw', function=Function(arguments='{"destination_city":"London"}', name='get_ticket_price'), type='function', index=0)], reasoning='The user explicitly asks ticket price to London. Must call the get_ticket_price function with destination_city "London".')
 DATABASE TOOL CALLED: Getting price for London
